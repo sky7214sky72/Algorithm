@@ -11,7 +11,7 @@ for plan in plans:
         if plan == moves_types[i]:
             nx = x + dx[i]
             ny = y + dy[i]
-    if nx<1 or ny<1 or nx>n or ny>n:
+    if nx < 1 or ny < 1 or nx > n or ny > n:
         continue
     x,y = nx,ny
 
