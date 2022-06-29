@@ -39,9 +39,10 @@ print(array)
 
 #N X M 크기의 2차원 리스트 초기화
 # _(언더스코어) 값을 무시하고 싶을 경우
+print('2차원')
 n=3
 m=3
-array = [[0] * m for _ in range(n)]
+array = [[0] for _ in range(n)]
 print(array)
 
 n=3
