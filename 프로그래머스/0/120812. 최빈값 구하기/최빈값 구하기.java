@@ -2,22 +2,18 @@ import java.util.*;
 
 class Solution {
     public int solution(int[] array) {
-        int max = 0;
+        int maxCount = 0;
         int answer = 0;
-        Arrays.sort(array);
-        max = array[array.length - 1];
-        int[] count = new int[max + 1];
-        for (int i=0;i<array.length;i++) {
-            count[array[i]]++; 
-        }
-        max = count[0];
-        for (int i=1;i<count.length;i++) {
-            if (max < count[i]) {
-                max = count[i];
-                answer = i;
-            } else if (max == count[i]) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int n : array) {
+            int count = map.getOrDefault(n, 0) + 1;
+            if (count > maxCount) {
+                maxCount = count;
+                answer = n;
+            } else if (count == maxCount) {
                 answer = -1;
             }
+            map.put(n, count);
         }
         return answer;
     }
