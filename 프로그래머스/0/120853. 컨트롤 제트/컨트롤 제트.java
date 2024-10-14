@@ -1,16 +1,18 @@
+import java.util.*;
 class Solution {
     public int solution(String s) {
-        String[] sArray = s.split(" ");
-        int index = 0;
         int answer = 0;
-        for (String a : sArray) {
+        Stack<Integer> stack = new Stack<>();
+        for (String a : s.split(" ")) {
             if (a.equals("Z")) {
-                answer-=Integer.parseInt(sArray[index-1]);
+                stack.pop();
             } else {
-                answer+=Integer.parseInt(a);
+                stack.push(Integer.parseInt(a));
             }
-            index++;
-        }        
+        }
+        for (Integer i : stack) {
+            answer+=i;
+        }
         return answer;
     }
 }
