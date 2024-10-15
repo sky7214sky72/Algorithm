@@ -48,6 +48,7 @@ class Solution {
         Point minimum = getMinimumPoint(points);
         Point maximum = getMaximumPoint(points);
         int width = (int) (maximum.x - minimum.x + 1);
+        //배열은 아래로 내려갈수록 값이 커지기때문에 이런식으로 높이를 구함
         int height = (int) (maximum.y - minimum.y + 1);
         char[][] arr = new char[height][width];
         for (char[] row : arr) {
