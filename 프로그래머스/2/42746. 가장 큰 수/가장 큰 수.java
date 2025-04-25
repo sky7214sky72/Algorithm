@@ -1,18 +1,16 @@
 import java.util.*;
 class Solution {
     public String solution(int[] numbers) {
-        String[] nums = new String[numbers.length];
+        String[] numStr = new String[numbers.length];
         for (int i=0;i<numbers.length;i++) {
-            nums[i] = String.valueOf(numbers[i]);
+            numStr[i] = String.valueOf(numbers[i]);
         }
-        Arrays.sort(nums, (o1, o2) -> (o2 + o1).compareTo(o1 + o2));
-        if ("0".equals(nums[0])) {
-            return "0";
+        Arrays.sort(numStr, (o1, o2) -> (o2+o1).compareTo(o1+o2));
+        if ("0".equals(numStr[0])) return "0";
+        StringBuilder answer = new StringBuilder();
+        for (String numS : numStr) {
+            answer.append(numS);
         }
-        String answer = "";
-        for (String num : nums) {
-            answer+=num;
-        }
-        return answer;
+        return answer.toString();
     }
 }
