@@ -284,3 +284,25 @@ poetry.toml
 
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,python
 /javaAlgo/javaAlgo.iml
+/codingTestStudy/build.gradle
+/codingTestStudy/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+/codingTestStudy/.gradle/buildOutputCleanup/cache.properties
+/codingTestStudy/.gradle/8.14/checksums/checksums.lock
+/codingTestStudy/.gradle/8.14/executionHistory/executionHistory.bin
+/codingTestStudy/.gradle/8.14/executionHistory/executionHistory.lock
+/codingTestStudy/.gradle/file-system.probe
+/codingTestStudy/.gradle/8.14/fileHashes/fileHashes.bin
+/codingTestStudy/.gradle/8.14/fileHashes/fileHashes.lock
+/codingTestStudy/.gradle/8.14/gc.properties
+/codingTestStudy/.gradle/vcs-1/gc.properties
+/codingTestStudy/gradle/wrapper/gradle-wrapper.jar
+/codingTestStudy/gradle/wrapper/gradle-wrapper.properties
+/codingTestStudy/gradlew
+/codingTestStudy/gradlew.bat
+/codingTestStudy/.gradle/8.14/fileChanges/last-build.bin
+/codingTestStudy/src/main/java/org/api/Main.java
+/codingTestStudy/.gradle/8.14/checksums/md5-checksums.bin
+/codingTestStudy/.gradle/buildOutputCleanup/outputFiles.bin
+/codingTestStudy/.gradle/8.14/fileHashes/resourceHashesCache.bin
+/codingTestStudy/settings.gradle
+/codingTestStudy/.gradle/8.14/checksums/sha1-checksums.bin
