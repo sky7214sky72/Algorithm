@@ -1,23 +1,22 @@
 import java.util.*;
 class Solution {
     public String solution(String[] participant, String[] completion) {
-        Map<String, Integer> map = new HashMap<>();
-        String answer = null;
+        String answer = "";
+        Map<String, Integer> pMap = new HashMap<>();
         for (String p : participant) {
-            if (map.get(p) == null) {
-                map.put(p, 1);
-            } else {
-                map.put(p, map.get(p) + 1);
-            }
+            pMap.put(p, pMap.getOrDefault(p, 0) +1);
         }
+        
         for (String c : completion) {
-            if (map.get(c) != null) {
-                map.put(c, map.get(c) -1);
+            if (pMap.containsKey(c)) {
+                pMap.put(c, pMap.getOrDefault(c, 0) - 1);
+            } else {
+                pMap.put(c, 1);
             }
         }
-        for (String key : map.keySet()) {
-            if (map.get(key) != 0) {
-                answer = key;
+        for (Map.Entry<String, Integer> entry: pMap.entrySet()) {
+            if (entry.getValue() != 0) {
+                answer = entry.getKey();
             }
         }
         return answer;
