@@ -1,20 +1,23 @@
 import java.util.*;
 class Solution {
-    public ArrayList solution(int[] progresses, int[] speeds) {
-        ArrayList<Integer> answer = new ArrayList<Integer>();
-        Queue<Integer> queue = new LinkedList<Integer>();
-        for (int i=0; i<progresses.length;i++) {
-            queue.add((int)Math.ceil((100.0-progresses[i])/speeds[i]));
+    public int[] solution(int[] progresses, int[] speeds) {
+        List<Integer> answer = new ArrayList<>();
+        //각 기능 배포일 계산
+        Queue<Integer> queue = new LinkedList<>();
+        for (int i=0;i<progresses.length;i++) {
+            int days = (int) Math.ceil((double) (100 - progresses[i]) / speeds[i]);
+            queue.offer(days);
         }
         while(!queue.isEmpty()) {
-            int minDay = queue.poll();
+            int first = queue.poll();
             int count = 1;
-            while (!queue.isEmpty() && queue.peek() <= minDay) {
+            
+            while(!queue.isEmpty() && queue.peek() <= first) {
                 queue.poll();
                 count++;
             }
             answer.add(count);
         }
-        return answer;
+        return answer.stream().mapToInt(i -> i).toArray();
     }
 }
