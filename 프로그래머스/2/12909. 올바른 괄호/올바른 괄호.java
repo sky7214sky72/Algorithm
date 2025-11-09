@@ -12,6 +12,7 @@ class Solution {
                 stack.pop();
             }
         }
+
         return stack.isEmpty();
     }
 }
